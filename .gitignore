@@ -5,4 +5,5 @@ tmp
 lib
 .DS_Store
 .idea
+.vscode/
 db.json
