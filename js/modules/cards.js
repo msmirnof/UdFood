@@ -1,6 +1,6 @@
-function cards() {
-  // классы для создание карточек меню
+import {getResource} from '../services/services'
 
+export default function cards() {
   class MenuCard {
     constructor(src, alt, title, descr, price, parentSelector, ...classes) {
       this.src = src;
@@ -54,16 +54,4 @@ function cards() {
         new MenuCard(img, altimg, title, descr, price, ".menu .container").render();
       });
     });
-
-  async function getResource(url) {
-    let res = await fetch(url);
-
-    if (!res.ok) {
-      throw new Error(`Could not fetch ${url}, status: ${res.status}`);
-    }
-
-    return await res.json();
-  }
 }
-
-module.exports = cards;

@@ -4,11 +4,14 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "webpack --env development",
+    "serve": "webpack serve --open"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "json-server": "^0.16.3"
+    "json-server": "^0.16.3",
+    "webpack": "^5.39.1",
+    "webpack-cli": "^4.7.2"
   }
 }
